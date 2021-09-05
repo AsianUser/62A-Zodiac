@@ -30,11 +30,11 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "bin/drive.cpp.o",
-            "src\\drive.cpp"
+            "bin/main.cpp.o",
+            "src\\main.cpp"
         ],
         "directory": "C:\\Users\\treed\\OneDrive\\Documents\\GitHub\\62A-Zodiac",
-        "file": "src\\drive.cpp"
+        "file": "src\\main.cpp"
     },
     {
         "arguments": [
@@ -104,11 +104,11 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "bin/Two_Bar.cpp.o",
-            "src\\Two_Bar.cpp"
+            "bin/drive.cpp.o",
+            "src\\drive.cpp"
         ],
         "directory": "C:\\Users\\treed\\OneDrive\\Documents\\GitHub\\62A-Zodiac",
-        "file": "src\\Two_Bar.cpp"
+        "file": "src\\drive.cpp"
     },
     {
         "arguments": [
@@ -178,11 +178,11 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "bin/B4-Bar.cpp.o",
-            "src\\B4-Bar.cpp"
+            "bin/Two_Bar.cpp.o",
+            "src\\Two_Bar.cpp"
         ],
         "directory": "C:\\Users\\treed\\OneDrive\\Documents\\GitHub\\62A-Zodiac",
-        "file": "src\\B4-Bar.cpp"
+        "file": "src\\Two_Bar.cpp"
     },
     {
         "arguments": [
@@ -215,10 +215,10 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "bin/main.cpp.o",
-            "src\\main.cpp"
+            "bin/B4-Bar.cpp.o",
+            "src\\B4-Bar.cpp"
         ],
         "directory": "C:\\Users\\treed\\OneDrive\\Documents\\GitHub\\62A-Zodiac",
-        "file": "src\\main.cpp"
+        "file": "src\\B4-Bar.cpp"
     }
 ]

@@ -12,4 +12,4 @@ void mogo_in  (bool hold = false);
 void mogo_neut(bool hold = false);
 void mogo_out (bool hold = false);
 
-void mogo_control();
+void mogo_control(void*);

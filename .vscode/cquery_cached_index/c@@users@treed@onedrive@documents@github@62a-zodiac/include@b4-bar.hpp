@@ -1,3 +1,4 @@
 #pragma once
 #include "api.h"
-void mogo(int position);
+void Bmogo(int position);
+void Bmogo_Control(void*);

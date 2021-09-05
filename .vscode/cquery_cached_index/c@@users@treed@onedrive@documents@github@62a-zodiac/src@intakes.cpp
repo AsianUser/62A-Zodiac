@@ -6,8 +6,10 @@ void intake(int power)
 {
   Intake.move(power);
 }
-void Intake_Control()
+void Intake_Control(void*)
 {
+  while(true)
+  {
   if(master.get_digital(DIGITAL_L1))
   {
      intake(127);
@@ -16,5 +18,6 @@ void Intake_Control()
   {
     intake(-127);
   }
-
+  pros::delay(20);
+  }
 }

@@ -262,6 +262,14 @@ void Set_Drive(int typeinput, float Target, int max, float kp)
     kp = RMax;
   }
 }
+void Drive_Control(void*)
+{
+  while(true)
+  {
+  drive(master.get_analog(ANALOG_RIGHT_Y),master.get_analog(ANALOG_LEFT_Y));
+  pros::delay(20);
+  }
+}
 
 //___________________________________________________________________________________________________________________________
 void set_angle(int Angle)

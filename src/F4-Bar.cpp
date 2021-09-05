@@ -162,8 +162,10 @@ mogo_out(bool hold)
 //  - when L1 is held and the mogo lift is out, bring the mogo lift to neutral position
 ///
 void
-mogo_control()
+mogo_control(void*)
 {
+  while(true)
+  {
   // Toggle for mogo
   if (master.get_digital(DIGITAL_R1) && mogo_lock==0)
   {
@@ -196,4 +198,6 @@ mogo_control()
     mogo_in();
   else if (!mogo_up)
     mogo_out();
+    pros::delay(20);
+  }
 }

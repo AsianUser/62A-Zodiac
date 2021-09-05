@@ -99,8 +99,11 @@ void Task2(void*)
 void opcontrol()
 {
 	printf("start\n");
-	pros::Task Task_One(Task1);
-	pros::Task Task_Two(Task2);
+	pros::Task Intakes(Intake_Control);
+	pros::Task F4Bar(mogo_control);
+	pros::Task TwoBar(Two_Bar_Control);
+	pros::Task Drive(Drive_Control);
+	pros::Task B4Bar(Bmogo_Control);
 	printf("Done\n");
 	while(1)
 	{

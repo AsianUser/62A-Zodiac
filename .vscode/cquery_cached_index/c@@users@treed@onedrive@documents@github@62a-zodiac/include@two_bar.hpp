@@ -5,4 +5,4 @@ const int Neutral = 8;
 const int Alliance = 9;
 void Bar(int input);
 void Position(int position);
-void Two_Bar_Control();
+void Two_Bar_Control(void*);

@@ -28,8 +28,10 @@ void Position(int position)
 int position = 0;
 int Two_Bar_Timer = 0;
 bool Full_Rotation = false;
-void Two_Bar_Control()
+void Two_Bar_Control(void*)
 {
+  while(true)
+  {
   if(master.get_digital(DIGITAL_L2) && (position == 1 || Full_Rotation))
   {
     Position(Alliance);
@@ -61,5 +63,6 @@ void Two_Bar_Control()
       }
     }
   }
-
+  pros::delay(20);
+  }
 }

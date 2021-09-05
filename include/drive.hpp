@@ -23,5 +23,6 @@ void Inertialtest();
 void drive(int r, int l);
 void Set_Drive(int typeinput, float Target, int max, float kp);
 void wait_drive();
+void Drive_Control(void*);
 extern pros::Task Drive_pid_task;
 extern pros::Task Turn_pid_task;
