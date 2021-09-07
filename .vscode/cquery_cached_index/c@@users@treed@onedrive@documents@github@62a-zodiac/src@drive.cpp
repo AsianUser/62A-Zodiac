@@ -1,13 +1,11 @@
 #include "main.h"
 pros::Controller master(CONTROLLER_MASTER);
 
-pros::Motor left_back(14, true);
-pros::Motor left_front(13, true);
-pros::Motor right_back(15);
-pros::Motor right_front(16);
-pros::Imu Inertial(20);
-pros::ADILineSensor RightLineSensor(3);
-pros::ADILineSensor LeftLineSensor(1);
+pros::Motor left_back(5, true);
+pros::Motor left_front(17, true);
+pros::Motor right_back(9);
+pros::Motor right_front(20);
+pros::Imu Inertial(7);
 
 float wheel_size = 3.25; //2.75 // 6.5
 float tick_per_rev = 535 * (5/3); //360

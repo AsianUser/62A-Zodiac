@@ -28,8 +28,8 @@ void on_center_button() {
 void initialize() {
 	pros::lcd::initialize();
 	pros::lcd::set_text(1, "Hello PROS User!");
-
 	pros::lcd::register_btn1_cb(on_center_button);
+		ResetInertial();
 }
 
 /**
@@ -104,6 +104,7 @@ void opcontrol()
 	pros::Task TwoBar(Two_Bar_Control);
 	pros::Task Drive(Drive_Control);
 	pros::Task B4Bar(Bmogo_Control);
+	pros::Task Spiner(Spin_Control);
 	printf("Done\n");
 	while(1)
 	{

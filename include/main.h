@@ -40,6 +40,7 @@
 #include "Intakes.hpp"
 #include "F4-Bar.hpp"
 #include "B4-Bar.hpp"
+#include "Mogo_Spinner.hpp"
 /**
  * You should add more #includes here
  */
