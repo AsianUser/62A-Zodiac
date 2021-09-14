@@ -103,8 +103,7 @@ void opcontrol()
 	pros::Task F4Bar(mogo_control);
 	pros::Task TwoBar(Two_Bar_Control);
 	pros::Task Drive(Drive_Control);
-	pros::Task B4Bar(Bmogo_Control);
-	pros::Task Spiner(Spin_Control);
+	pros::Task B4Bar(mogo_controlB);
 	printf("Done\n");
 	while(1)
 	{
