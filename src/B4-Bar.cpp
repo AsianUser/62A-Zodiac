@@ -1,7 +1,9 @@
 #include "main.h"
 
 pros::ADIDigitalOut RBMogo(2);
+pros::ADIDigitalOut RMogo2(5);
 pros::ADIDigitalOut LBMogo(1);
+pros::ADIDigitalOut LMogo2(4);
 pros::ADIDigitalOut Lock(3);
 const int OUT = 0;
 const int IN = 1;
@@ -14,11 +16,16 @@ void Bmogo(int position)
   {
     RBMogo.set_value(true);
     LBMogo.set_value(true);
+    LMogo2.set_value(true);
+    RMogo2.set_value(true);
   }
   else if(position == IN)
   {
     RBMogo.set_value(false);
+    RMogo2.set_value(false);
     LBMogo.set_value(false);
+    LMogo2.set_value(false);
+
   }
 }
 void lock(int position)

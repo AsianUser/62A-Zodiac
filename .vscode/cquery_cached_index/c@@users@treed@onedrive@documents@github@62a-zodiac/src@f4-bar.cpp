@@ -1,6 +1,6 @@
 #include "main.h"
 
-const int MOGO_OUT  = 575;
+const int MOGO_OUT  = 820;
 const float MOGO_KP = 0.5;
 const int DELAY_TIME = 10;
 // Driver Control Parameters
