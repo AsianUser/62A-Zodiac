@@ -15,7 +15,7 @@ bool is_neutB = false;
 bool is_outB = false;
 
 
-pros::Motor mogoB(10, MOTOR_GEARSET_36, false, MOTOR_ENCODER_DEGREES);
+pros::Motor mogoB(8, MOTOR_GEARSET_36, false, MOTOR_ENCODER_DEGREES);
 
 
 void set_mogoB(int input)
