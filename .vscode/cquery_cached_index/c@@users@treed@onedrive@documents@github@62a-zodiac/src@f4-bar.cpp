@@ -15,7 +15,7 @@ bool is_neut = false;
 bool is_out = false;
 
 
-pros::Motor mogo(10, MOTOR_GEARSET_36, false, MOTOR_ENCODER_DEGREES);
+pros::Motor mogo(6, MOTOR_GEARSET_36, false, MOTOR_ENCODER_DEGREES);
 
 
 void set_mogo(int input)

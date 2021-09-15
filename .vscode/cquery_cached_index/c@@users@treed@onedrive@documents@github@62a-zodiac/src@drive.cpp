@@ -3,7 +3,7 @@ pros::Controller master(CONTROLLER_MASTER);
 
 pros::Motor left_back(9, true);
 pros::Motor left_front(20);
-pros::Motor right_back(5, true);
+pros::Motor right_back(3, true);
 pros::Motor right_front(17);
 pros::Imu Inertial(7);
 

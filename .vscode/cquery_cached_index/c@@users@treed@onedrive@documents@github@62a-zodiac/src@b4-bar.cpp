@@ -1,6 +1,6 @@
 #include "main.h"
 
-const int MOGO_OUT  = 820;
+const int MOGO_OUT  = 500;
 const float MOGO_KP = 0.5;
 const int DELAY_TIME = 10;
 // Driver Control Parameters
@@ -15,7 +15,7 @@ bool is_neutB = false;
 bool is_outB = false;
 
 
-pros::Motor mogoB(8, MOTOR_GEARSET_36, false, MOTOR_ENCODER_DEGREES);
+pros::Motor mogoB(10, MOTOR_GEARSET_36, true, MOTOR_ENCODER_DEGREES);
 
 
 void set_mogoB(int input)
@@ -167,7 +167,7 @@ mogo_controlB(void*)
   while(true)
   {
   // Toggle for mogo
-  if (master.get_digital(DIGITAL_R1) && mogo_lockB==0)
+  if (master.get_digital(DIGITAL_R2) && mogo_lockB==0)
   {
     if (is_at_neutB)
       mogo_upB = false;
@@ -178,7 +178,7 @@ mogo_controlB(void*)
     mogo_lockB = 1;
   }
   // If mogo is held while the mogo lift is out, bring the mogo lift to neut position
-  else if (master.get_digital(DIGITAL_R1))
+  else if (master.get_digital(DIGITAL_R2))
   {
     if (mogo_upB) {
       controller_mogo_timerB+=DELAY_TIME;
