@@ -55,10 +55,7 @@ void Two_Bar_Control(void*)
       Full_Rotation = false;
     }*/
     Bar(127);
-    if(hold != previous_hold && previous_hold == true)
-    {
-      position = 1;
-    }
+
 
   }
   else if(master.get_digital(DIGITAL_L2) && position == 1 /*&& position == 0 && !Full_Rotation*/)
@@ -67,22 +64,29 @@ void Two_Bar_Control(void*)
     //Position(Neutral);
     //position = 1;
     Bar(-127);
-    if(hold != previous_hold && previous_hold == true)
-    {
-      position = 0;
-    }
   }
   else if(position == 1 && !master.get_digital(DIGITAL_L2))
   {
+    hold = false;
     Bar(-20);
+
   }
+
   else
   {
     hold = false;
     Bar(0);
   }
-
-
+  if(hold != previous_hold && previous_hold == true)
+  {
+    if(position == 0)
+    position = 1;
+    else
+    position = 0;
+  }
+  printf("Hold: %d \n", hold);
+  printf("Prev Hold: %d \n", previous_hold);
+  printf("position: %d \n", position);
   /*if(master.get_digital(DIGITAL_L2) && position == 2 && !Full_Rotation)
   {
     Position(Gain);
@@ -99,7 +103,7 @@ void Two_Bar_Control(void*)
       }
     }
   }*/
-  previous_hold = hold; 
+  previous_hold = hold;
   pros::delay(20);
   }
 }

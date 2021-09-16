@@ -104,11 +104,11 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "bin/F4-Bar.cpp.o",
-            "src\\F4-Bar.cpp"
+            "bin/drive.cpp.o",
+            "src\\drive.cpp"
         ],
         "directory": "C:\\Users\\treed\\OneDrive\\Documents\\GitHub\\62A-Zodiac",
-        "file": "src\\F4-Bar.cpp"
+        "file": "src\\drive.cpp"
     },
     {
         "arguments": [
@@ -141,11 +141,11 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "bin/drive.cpp.o",
-            "src\\drive.cpp"
+            "bin/F4-Bar.cpp.o",
+            "src\\F4-Bar.cpp"
         ],
         "directory": "C:\\Users\\treed\\OneDrive\\Documents\\GitHub\\62A-Zodiac",
-        "file": "src\\drive.cpp"
+        "file": "src\\F4-Bar.cpp"
     },
     {
         "arguments": [

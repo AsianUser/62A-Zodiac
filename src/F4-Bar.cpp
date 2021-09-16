@@ -16,13 +16,16 @@ bool is_out = false;
 
 
 pros::Motor mogo(6, MOTOR_GEARSET_36, false, MOTOR_ENCODER_DEGREES);
-
+pros::ADIDigitalOut FLock(2);
 
 void set_mogo(int input)
 {
   mogo = input;
 }
-
+void flock(bool position)
+{
+  FLock.set_value(position);
+}
 void zero_mogo()
  {
    mogo.tare_position();
@@ -195,9 +198,16 @@ mogo_control(void*)
 
   // Bring mogo to position based on is_at_neut and mogo_up
   if (mogo_up)
+  {
+    flock(true);
+    pros::delay(100);
     mogo_in();
+  }
   else if (!mogo_up)
+  {
     mogo_out();
+    flock(false);
+  }
     pros::delay(20);
   }
 }
