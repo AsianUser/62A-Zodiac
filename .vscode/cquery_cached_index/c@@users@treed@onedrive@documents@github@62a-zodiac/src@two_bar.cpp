@@ -4,7 +4,7 @@ const int GAIN = 0;
 const int NEUTRAL = 0;
 const int ALLIANCE = 434;
 
-pros::Motor TwoBar(15, MOTOR_GEARSET_36, false, MOTOR_ENCODER_DEGREES);
+pros::Motor TwoBar(1, MOTOR_GEARSET_36, false, MOTOR_ENCODER_DEGREES);
 int Get_pos()
 {
   return TwoBar.get_position();

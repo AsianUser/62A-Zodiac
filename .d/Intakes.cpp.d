@@ -1,4 +1,4 @@
-bin/F4-Bar.cpp.o: src/F4-Bar.cpp include/main.h include/api.h \
+bin/Intakes.cpp.o: src/Intakes.cpp include/main.h include/api.h \
  include/pros/adi.h include/pros/colors.h include/pros/distance.h \
  include/pros/ext_adi.h include/pros/adi.h include/pros/adi.h \
  include/pros/gps.h include/pros/imu.h include/pros/llemu.h \

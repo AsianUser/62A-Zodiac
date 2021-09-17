@@ -1,10 +1,12 @@
 #include "main.h"
 
 pros::Motor Intake(4);
+pros::Motor Conveyor(15);
 
 void intake(int power)
 {
   Intake.move(power);
+  Conveyor.move(power);
 }
 void Intake_Control(void*)
 {

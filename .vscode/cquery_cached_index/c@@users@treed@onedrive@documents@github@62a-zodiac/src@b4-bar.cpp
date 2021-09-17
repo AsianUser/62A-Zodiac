@@ -199,14 +199,14 @@ mogo_controlB(void*)
   // Bring mogo to position based on is_at_neutB and mogo_upB
   if (mogo_upB)
   {
-    block(true);
+    block(false);
     pros::delay(100);
     mogo_inB();
   }
   else if (!mogo_upB)
   {
     mogo_outB();
-    block(false);
+    block(true);
   }
     pros::delay(20);
   }
