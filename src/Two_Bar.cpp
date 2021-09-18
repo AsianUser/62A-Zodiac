@@ -84,9 +84,9 @@ void Two_Bar_Control(void*)
     else
     position = 0;
   }
-  printf("Hold: %d \n", hold);
-  printf("Prev Hold: %d \n", previous_hold);
-  printf("position: %d \n", position);
+  //printf("Hold: %d \n", hold);
+  //printf("Prev Hold: %d \n", previous_hold);
+  //printf("position: %d \n", position);
   /*if(master.get_digital(DIGITAL_L2) && position == 2 && !Full_Rotation)
   {
     Position(Gain);
