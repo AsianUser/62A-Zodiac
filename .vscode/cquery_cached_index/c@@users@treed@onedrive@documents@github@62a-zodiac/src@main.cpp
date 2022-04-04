@@ -30,6 +30,7 @@ void initialize() {
 	pros::lcd::set_text(1, "Hello PROS User!");
 	pros::lcd::register_btn1_cb(on_center_button);
 		ResetInertial();
+		pros::delay(500);
 }
 
 /**
@@ -61,8 +62,17 @@ void competition_initialize() {}
  * will be stopped. Re-enabling the robot will restart the task, not re-start it
  * from where it left off.
  */
-void autonomous() {}
-
+void autonomous()
+{
+	//printf("Auton Started \n");
+	std::cout << "Auton started" << std::endl;
+	pros::Task Drive_pid_task(Drive_pid);
+	std::cout << "DrivePID Started" << std::endl;
+	//printf("DrivePID started");
+	Set_Drive(Drive, 40, 100, 0.5);
+	pros::delay(5000);
+	//printf("Movement finished");
+}
 /**
  * Runs the operator control code. This function will be started in its own task
  * with the default priority and stack size whenever the robot is enabled via
@@ -103,8 +113,7 @@ void opcontrol()
 	pros::Task F4Bar(mogo_control);
 	pros::Task TwoBar(Two_Bar_Control);
 	pros::Task Drive(Drive_Control);
-	pros::Task B4Bar(Bmogo_Control);
-	pros::Task Spiner(Spin_Control);
+	pros::Task B4Bar(mogo_controlB);
 	printf("Done\n");
 	while(1)
 	{

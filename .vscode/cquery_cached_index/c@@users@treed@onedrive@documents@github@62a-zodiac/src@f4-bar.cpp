@@ -1,6 +1,6 @@
 #include "main.h"
 
-const int MOGO_OUT  = 575;
+const int MOGO_OUT  = 820;
 const float MOGO_KP = 0.5;
 const int DELAY_TIME = 10;
 // Driver Control Parameters
@@ -15,14 +15,17 @@ bool is_neut = false;
 bool is_out = false;
 
 
-pros::Motor mogo(10, MOTOR_GEARSET_36, false, MOTOR_ENCODER_DEGREES);
-
+pros::Motor mogo(6, MOTOR_GEARSET_36, false, MOTOR_ENCODER_DEGREES);
+pros::ADIDigitalOut FLock(8);
 
 void set_mogo(int input)
 {
   mogo = input;
 }
-
+void flock(bool position)
+{
+  FLock.set_value(position);
+}
 void zero_mogo()
  {
    mogo.tare_position();
@@ -195,9 +198,16 @@ mogo_control(void*)
 
   // Bring mogo to position based on is_at_neut and mogo_up
   if (mogo_up)
+  {
+    flock(false);
+    pros::delay(100);
     mogo_in();
+  }
   else if (!mogo_up)
+  {
     mogo_out();
+    flock(true);
+  }
     pros::delay(20);
   }
 }
